@@ -2,8 +2,8 @@
 
 # Set variable to be used later  
 # echo -n "Enter the email address for this account: " 
-read email_address
-email_address=$(echo "$email_address" | sed 's/[^A-Za-z0-9-]/-/g')
+# read email_address
+email_address=$($SSHKEY | sed 's/[^A-Za-z0-9-]/-/g')
 
 # SSH key name and path
 ssh_path=~/.ssh
